@@ -24,6 +24,7 @@ class Diffutils(AutotoolsPackage, GNUMirrorPackage):
     build_directory = 'spack-build'
 
     patch('nvhpc.patch', when='@3.7 %nvhpc')
+    patch('intprops-work-around-nvc-22.1-bug.patch', when='@3.8 %nvhpc')
 
     depends_on('iconv')
 
