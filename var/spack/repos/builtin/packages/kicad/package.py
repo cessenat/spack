@@ -13,11 +13,12 @@ class Kicad(CMakePackage):
     Layout with Gerber output."""
 
     homepage = 'https://kicad.org'
-    url = 'https://gitlab.com/kicad/code/kicad/-/archive/5.1.8/kicad-5.1.8.tar.gz'
+    url = 'https://gitlab.com/kicad/code/kicad/-/archive/5.1.8/kicad-5.1.8.bz2'
     maintainers = ['aweits']
 
-    version('5.1.9', sha256='841be864b9dc5c761193c3ee9cbdbed6729952d7b38451aa8e1977bdfdb6081b')
-    version('5.1.8', sha256='bf24f8ef427b4a989479b8e4af0b8ae5c54766755f12748e2e88a922c5344ca4')
+    version('6.0.5', sha256='fc77bf07a9b9e7bb889208f9741d21134ad398391085d10d3cf4afd9204507ab')
+    version('5.1.9', sha256='631941d9a7cf7627e2831d5634d77627453ca04536e4972fc7ae4bf192a979d6')
+    version('5.1.8', sha256='81ab6c167c982b2c90506134b0ee7ea5f9d61aec59856887892644dc9bbb9346')
 
     depends_on('wxwidgets')
     depends_on('python@3:', type=('build', 'run'))
@@ -54,6 +55,10 @@ class Kicad(CMakePackage):
         ('5.1.9', 'packages3D', '35a4888dabd2dedb0d49c3e84b0eebc97b306200510e818dad90d4bb1c9e3296'),
         ('5.1.9', 'symbols', '6741a7b01f14f1f5aae3155a554816516cf02ce7790074ba8462dee8091f8c2f'),
         ('5.1.9', 'templates', 'bacf93567f8efe87314762448bb69698c8ed387058c13868c051c91740014aac'),
+        ('6.0.5', 'footprints', 'd3cf9eb72ebac152548c7dd595725827c5f7b52ee2e96fe951ed41637a178bb5'),
+        ('6.0.5', 'packages3D', 'af10545c315474495e8be2137f25172d16103430133e91437cd4cf4f9d382436'),
+        ('6.0.5', 'symbols', '2ae9c33975510c8ffd89f0ad66f119e18e82bcafd02002f7bd30bbd369a46435'),
+        ('6.0.5', 'templates', 'd296e77b8106d772ef6a31747fa2bbece51dd7975573a39c865ed075ce3aa91a'),
     ]
 
     for ver, lib, checksum in resource_list:
